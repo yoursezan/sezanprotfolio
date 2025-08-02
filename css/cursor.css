@@ -1,0 +1,22 @@
+ 
+        .cursor-bubble {
+            width: 30px;
+            height: 30px;
+            position:fixed;
+            top: 0;
+            left: 0;
+            pointer-events:none;
+            border-radius: 100%;
+            border: 2px solid rgba(0, 0, 0, 0.6);
+            background: rgba(0, 0, 0, 0.4);
+            box-shadow: 0 10px 12px rgba(255, 136, 0, 0.6);
+            backdrop-filter: blur(1px);
+            z-index: 9999;
+            transition: transform 0.15s ease, opacity 0.25s ease;
+        }
+
+        a:hover~.cursor-bubble,
+        button:hover~.cursor-bubble {
+            transform: scale(1.5);
+        }
+     

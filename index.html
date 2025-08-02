@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Arafath Sezan's Protfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/cursor.css">
+
+    <link rel="icon" type="image/x-icon" href="/image/sezanProfile.jpg">
+
+
+
+
+</head>
+
+<body style="background-color: #FFFDD1;">
+    <div class="cursor-bubble"></div>
+
+
+
+    <nav class="navbar navbar-expand-lg " style="background-color: #c8be8e;">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="index.html"><img src="/image/logo-sezan.png" alt="Sezan Logo"
+                    height="40"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav d-flex justify-content-evenly w-100">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="About.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Projects.html">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Skills.html">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Resume.html">Resume</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Contact.html">Contact</a>
+                    </li>
+                </ul>
+
+            </div>
+            <form class="d-flex" role="search" onsubmit="handleSearch(event)">
+                <input id="searchInput" class="form-control me-2" type="search" placeholder="Search..."
+                    aria-label="Search" />
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+
+        </div>
+    </nav>
+    <div class="container mt-3">
+        <div id="searchResults"></div>
+    </div>
+
+
+
+
+
+    <div class="d-flex align-items-center mt-5">
+        <div class="flex-shrink-0">
+            <img src="/image/sezanProfile.jpg" alt="Sezan's photo" class="rounded-end-circle" width="450px">
+        </div>
+
+        <div class="flex-grow-1 ms-3 d-flex flex-column justify-content-center align-items-center text-center">
+            <h3><span id="typed"></span></h3>
+
+
+            <!-- CTA Buttons -->
+            <div class="mt-3">
+                <a href="Arafath_Islam_Sezan_Resume.pdf" class="btn btn-primary me-2" target="_blank">View Resume</a>
+                <a href="Contact.html" class="btn btn-outline-primary">Contact Me</a>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <div class="container mt-5">
+        <div class="row justify-content-center g-4">
+
+            <div class="col-md-3">
+                <div class="card h-100">
+                    <img src="/image/experience (2).png" class="card-img-top" alt="...">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Experience</h5>
+                        <p class="card-text">I have completed the work that was assigned to me for several
+                            organizations.</p>
+                        <a href="Experience.html" class="btn btn-primary mt-auto">See All.</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card h-100">
+                    <img src="/image/education.png" class="card-img-top" alt="...">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Education</h5>
+                        <p class="card-text">I have studied at several reputable educational institutions in Bangladesh.
+                        </p>
+                        <a href="Education.html" class="btn btn-primary mt-auto">For Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card h-100">
+                    <img src="/image/biography.png" class="card-img-top" alt="...">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Biography</h5>
+                        <p class="card-text">I am Arafath Islam Sezan. The third child of my parents. I am a member of a
+                            well-known family in Barisal city. I was born...</p>
+                        <a href="Biography.html" class="btn btn-primary mt-auto">Click for more</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card h-100">
+                    <img src="/image/awards.png" class="card-img-top" alt="...">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Awards</h5>
+                        <p class="card-text">Awards are recognition of work.The awards I have won inspire me to work
+                            harder.</p>
+                        <a href="Awards.html" class="btn btn-primary mt-auto">See All.</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <img src="/image/bannerSez.jpeg" alt="banner of Sezan" class="img-fluid w-100">
+
+
+
+    <div class="card text-center">
+        <div class="card-header">
+            <!-- Optional -->
+        </div>
+
+        <div class="card-body">
+            <h5 class="card-title">For Contact</h5>
+            <p class="card-text">You can find me on these social platforms:</p>
+
+            <!-- Facebook -->
+            <a href="https://www.facebook.com/arafath.sezan.14" target="_blank" class="me-2">
+                <img src="https://img.icons8.com/ios-filled/40/1877F2/facebook-new.png" alt="Facebook" />
+            </a>
+
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/arafath-islam-sezan/" target="_blank" class="me-2">
+                <img src="https://img.icons8.com/ios-filled/40/0A66C2/linkedin.png" alt="LinkedIn" />
+            </a>
+
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/mr_sezz0_0/" target="_blank" class="me-2">
+                <img src="https://img.icons8.com/ios-filled/40/E4405F/instagram-new.png" alt="Instagram" />
+            </a>
+
+            <!-- GitHub -->
+            <a href="https://github.com/yoursezan" target="_blank">
+                <img src="https://img.icons8.com/ios-filled/40/000000/github.png" alt="GitHub" />
+            </a>
+
+            <!-- Gmail -->
+            <a href="arafath.sezan1999@gmail.com" target="_blank">
+                <img src="https://img.icons8.com/ios-filled/40/D14836/gmail.png" alt="Gmail" />
+            </a>
+        </div>
+
+        <div class="card-footer text-body-secondary">
+            <!-- Optional Footer -->
+        </div>
+    </div>
+
+
+ 
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            new Typed('#typed', {
+                strings: [
+                    "Hi, I'm <b>Arafath Islam Sezan</b>.",
+                    "| Tech Enthusiast",
+                ],
+                typeSpeed: 50,
+                backSpeed: 25,
+                backDelay: 1500,
+                startDelay: 500,
+                loop: true
+            });
+        });
+    </script>
+
+
+    <style>
+        #typed {
+            min-height: 50px;
+            display: inline-block;
+            font-weight: bold;
+        }
+
+        .typed-cursor {
+            font-size: 1.5rem;
+            color: #0d6efd;
+            animation: blink 0.7s infinite;
+        }
+
+        @keyframes blink {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0;
+            }
+        }
+    </style>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+
+
+
+
+   <script src="JS/searching.js"></script>
+
+    <script src="/JS/cursor.js"></script>
+
+
+</body>
+
+</html>

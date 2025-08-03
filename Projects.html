@@ -1,78 +1,153 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Projects</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-
-    <link rel="stylesheet" href="/css/index.css">
-
-    <link rel="icon" type="image/x-icon" href="/image/sezanProfile.jpg">
-    <link rel="stylesheet" href="/css/cursor.css">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+  <link rel="stylesheet" href="/css/index.css">
+  <link rel="stylesheet" href="/css/cursor.css">
+  <link rel="icon" href="/image/sezanProfile.jpg" />
+  <style>
+    body {
+      background-color: #FFFDD1;
+    }
+    .project-card {
+      display: block;
+    }
+    .badge {
+      font-size: 0.75rem;
+    }
+  </style>
 </head>
 
-<body style="background-color: #FFFDD1;">
-    <div class="cursor-bubble"></div>
+<body>
+  <div class="cursor-bubble"></div>
 
-    <nav class="navbar navbar-expand-lg " style="background-color: #c8be8e;" >
-        <div class="container-fluid">
-            <a class="navbar-brand fw-bold" href="index.html"><img src="/image/logo-sezan.png" alt="Sezan Logo" height="40"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav d-flex justify-content-evenly w-100">
-                    <li class="nav-item">
-                        <a class="nav-link " aria-current="page" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="About.html">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="Projects.html">Projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Skills.html">Skills</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Resume.html">Resume</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Contact.html">Contact</a>
-                    </li>
-                </ul>
-
-            </div>
-            <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-        </div>
-    </nav>
-    <div class="container mt-3">
-        <div id="searchResults"></div>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg" style="background-color: #c8be8e;">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold" href="index.html"><img src="/image/logo-sezan.png" alt="Sezan Logo" height="40"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav d-flex justify-content-evenly w-100">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="About.html">About</a></li>
+          <li class="nav-item"><a class="nav-link active fw-bold" href="Projects.html">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="Skills.html">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="Resume.html">Resume</a></li>
+          <li class="nav-item"><a class="nav-link" href="Contact.html">Contact</a></li>
+        </ul>
+      </div>
     </div>
+  </nav>
 
+  <!-- Filter Buttons -->
+  <div class="text-center mt-5">
+    <h2 class="fw-bold">🚀 My Projects</h2>
+    <div class="my-3">
+      <button class="btn btn-outline-dark m-1" onclick="filterProjects('all')">All</button>
+      <button class="btn btn-outline-dark m-1" onclick="filterProjects('web')">Web</button>
+      <button class="btn btn-outline-dark m-1" onclick="filterProjects('iot')">IoT</button>
+      <button class="btn btn-outline-dark m-1" onclick="filterProjects('mobile')">Mobile</button>
+    </div>
+  </div>
 
+  <!-- Project Cards -->
+  <div class="container py-4">
+    <div class="row" id="projectGrid">
+      <div class="col-md-4 mb-4 project-card" data-category="web" data-aos="fade-up">
+        <div class="card h-100 shadow-sm">
+          <img src="/image/foodchain.jpg" class="card-img-top" alt="Project 1">
+          <div class="card-body">
+            <h5 class="card-title">Food Supply Chain</h5>
+            <p class="card-text">A traceable supply chain system using Blockchain and NFC.</p>
+            <span class="badge bg-secondary m-1">PHP</span>
+            <span class="badge bg-secondary m-1">Blockchain</span>
+            <span class="badge bg-secondary m-1">IoT</span>
+            <div class="mt-2">
+              <a href="#" class="btn btn-sm btn-success">Live Demo</a>
+              <a href="#" class="btn btn-sm btn-dark">GitHub</a>
+            </div>
+          </div>
+        </div>
+      </div>
 
+      <div class="col-md-4 mb-4 project-card" data-category="web" data-aos="fade-up">
+        <div class="card h-100 shadow-sm">
+          <img src="/image/gub-portal.jpeg" class="card-img-top" alt="Project 2">
+          <div class="card-body">
+            <h5 class="card-title">Green University Student Portal</h5>
+            <p class="card-text"> The frontend of GUB's current student portal has been copied without using any library. </p>
+            <span class="badge bg-secondary m-1">HTML</span>
+            <span class="badge bg-secondary m-1">CSS</span>
+            <span class="badge bg-secondary m-1">JS</span>
+            <div class="mt-2">
+              <a href="https://gubportaltry.netlify.app/" class="btn btn-sm btn-success">Live Demo</a>
+              <a href="https://github.com/yoursezan/GUB-try.git" class="btn btn-sm btn-dark">GitHub</a>
+            </div>
+          </div>
+        </div>
+      </div>
 
+      <div class="col-md-4 mb-4 project-card" data-category="iot" data-aos="fade-up">
+        <div class="card h-100 shadow-sm">
+          <img src="/image/iotproject.jpg" class="card-img-top" alt="Project 3">
+          <div class="card-body">
+            <h5 class="card-title">IoT Home Monitor</h5>
+            <p class="card-text">A Raspberry Pi based sensor system for smart home monitoring.</p>
+            <span class="badge bg-secondary m-1">Python</span>
+            <span class="badge bg-secondary m-1">Raspberry Pi</span>
+            <div class="mt-2">
+              <a href="#" class="btn btn-sm btn-success">Live Demo</a>
+              <a href="#" class="btn btn-sm btn-dark">GitHub</a>
+            </div>
+          </div>
+        </div>
+      </div>
 
+      <div class="col-md-4 mb-4 project-card" data-category="iot" data-aos="fade-up">
+        <div class="card h-100 shadow-sm">
+          <img src="/image/iotproject.jpg" class="card-img-top" alt="Project 4">
+          <div class="card-body">
+            <h5 class="card-title">IoT Home Monitor</h5>
+            <p class="card-text">A Raspberry Pi based sensor system for smart home monitoring.</p>
+            <span class="badge bg-secondary m-1">Python</span>
+            <span class="badge bg-secondary m-1">Raspberry Pi</span>
+            <div class="mt-2">
+              <a href="#" class="btn btn-sm btn-success">Live Demo</a>
+              <a href="#" class="btn btn-sm btn-dark">GitHub</a>
+            </div>
+          </div>
+        </div>
+      </div>
 
+      <!-- More projects can be added here -->
+    </div>
+  </div>
 
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000 });
 
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
-        crossorigin="anonymous"></script>
-        <script src="/JS/cursor.js"></script>
-        <script src="JS/searching.js"></script>
+    function filterProjects(category) {
+      const cards = document.querySelectorAll('.project-card');
+      cards.forEach(card => {
+        if (category === 'all' || card.dataset.category === category) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+  </script>
+  <script src="/JS/cursor.js"></script>
 </body>
 
 </html>
